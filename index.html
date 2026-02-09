@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Kuliah Semester Gasal</title>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --bg: #f8fafc;
+        --card-bg: #ffffff;
+        --text: #1e293b;
+        --senin: #ef4444;
+        --selasa: #f59e0b;
+        --rabu: #10b981;
+        --kamis: #8b5cf6;
+        --jumat: #06b6d4;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        background: var(--card-bg);
+        border-radius: 20px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: var(--primary);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+      .header p {
+        margin: 10px 0 0;
+        opacity: 0.9;
+        font-size: 14px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+      }
+
+      th {
+        background: #f1f5f9;
+        padding: 15px;
+        text-align: left;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748b;
+      }
+
+      td {
+        padding: 16px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+      }
+
+      .day-label {
+        font-weight: 800;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        color: white;
+      }
+      .bg-senin {
+        background: var(--senin);
+      }
+      .bg-selasa {
+        background: var(--selasa);
+      }
+      .bg-rabu {
+        background: var(--rabu);
+      }
+      .bg-kamis {
+        background: var(--kamis);
+      }
+      .bg-jumat {
+        background: var(--jumat);
+      }
+
+      .kode {
+        font-family: monospace;
+        color: #64748b;
+        font-weight: bold;
+      }
+      .matkul {
+        font-weight: 600;
+        color: #0f172a;
+      }
+      .jam {
+        color: var(--primary);
+        font-weight: 500;
+      }
+      .ruang {
+        display: inline-block;
+        padding: 4px 8px;
+        background: #dbeafe;
+        color: #1e40af;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 12px;
+      }
+
+      tr:hover {
+        background-color: #f8fafc;
+      }
+
+      @media (max-width: 600px) {
+        th:nth-child(2),
+        td:nth-child(2) {
+          display: none;
+        } /* Sembunyikan kode di HP biar gak sempit */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>JADWAL PERKULIAHAN</h1>
+        <p>Teknik Informatika - Semester Gasal</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>HARI</th>
+            <th>KODE</th>
+            <th>MATA KULIAH</th>
+            <th>WAKTU</th>
+            <th>RUANG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="day-label bg-senin">SENIN</span></td>
+            <td class="kode">IF21406</td>
+            <td class="matkul">Sistem Pendukung Keputusan</td>
+            <td class="jam">08:50 - 10:35</td>
+            <td><span class="ruang">E 206</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-selasa">SELASA</span></td>
+            <td class="kode">IF21405</td>
+            <td class="matkul">Praktikum Kecerdasan Buatan</td>
+            <td class="jam">07:00 - 08:45</td>
+            <td><span class="ruang">F 212</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-selasa">SELASA</span></td>
+            <td class="kode">IF21408</td>
+            <td class="matkul">Data Mining</td>
+            <td class="jam">08:50 - 10:35</td>
+            <td><span class="ruang">E 206</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-rabu">RABU</span></td>
+            <td class="kode">IF21407</td>
+            <td class="matkul">Logika Fuzzy</td>
+            <td class="jam">07:00 - 08:45</td>
+            <td><span class="ruang">C 202</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-rabu">RABU</span></td>
+            <td class="kode">IF21402</td>
+            <td class="matkul">Praktikum Jaringan Komputer</td>
+            <td class="jam">08:50 - 10:35</td>
+            <td><span class="ruang">Lab. Jarkom</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-rabu">RABU</span></td>
+            <td class="kode">IF21404</td>
+            <td class="matkul">Rekayasa Perangkat Lunak</td>
+            <td class="jam">10:40 - 12:25</td>
+            <td><span class="ruang">C 206</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-kamis">KAMIS</span></td>
+            <td class="kode">IF21B11</td>
+            <td class="matkul">Machine Learning</td>
+            <td class="jam">07:00 - 08:45</td>
+            <td><span class="ruang">E 104</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-kamis">KAMIS</span></td>
+            <td class="kode">IF21B10</td>
+            <td class="matkul">Algoritma Genetika</td>
+            <td class="jam">13:00 - 14:45</td>
+            <td><span class="ruang">E 104</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-jumat">JUMAT</span></td>
+            <td class="kode">IF21401</td>
+            <td class="matkul">Interaksi Manusia Komputer</td>
+            <td class="jam">08:50 - 10:35</td>
+            <td><span class="ruang">C 206</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-label bg-jumat">JUMAT</span></td>
+            <td class="kode">IF21403</td>
+            <td class="matkul">Pemrograman Web II</td>
+            <td class="jam">13:00 - 14:45</td>
+            <td><span class="ruang">C 205</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
